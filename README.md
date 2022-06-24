@@ -15,5 +15,5 @@ Inside Load data script:
 * **loadData.py** : create the database.
 * **main.py** : main
 
-**project** : Spring boot App.
+* **project** : Spring boot App.
 
