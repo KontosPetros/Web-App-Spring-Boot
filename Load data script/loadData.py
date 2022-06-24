@@ -1,7 +1,7 @@
 from globals import *
 
 try:
-    connection = mysql.connector.connect(host="localhost" , user="root",passwd="Datavasileiadis1!",allow_local_infile=True)
+    connection = mysql.connector.connect(host="localhost" , user="root",passwd="password!",allow_local_infile=True)
     print("Connected to localhost db")
     cursor = connection.cursor()
 except Exception as e:
