@@ -1,0 +1,26 @@
+Country_Id,Country Code,Region,IncomeGroup,TableName
+1,AUT,Europe & Central Asia,High income,Austria
+2,BEL,Europe & Central Asia,High income,Belgium
+3,BGR,Europe & Central Asia,Upper middle income,Bulgaria
+4,HRV,Europe & Central Asia,High income,Croatia
+5,DNK,Europe & Central Asia,High income,Denmark
+6,EST,Europe & Central Asia,High income,Estonia
+7,FRA,Europe & Central Asia,High income,France
+8,DEU,Europe & Central Asia,High income,Germany
+9,GRC,Europe & Central Asia,High income,Greece
+10,HUN,Europe & Central Asia,High income,Hungary
+11,IRL,Europe & Central Asia,High income,Ireland
+12,ITA,Europe & Central Asia,High income,Italy
+13,LVA,Europe & Central Asia,High income,Latvia
+14,LTU,Europe & Central Asia,High income,Lithuania
+15,NLD,Europe & Central Asia,High income,Netherlands
+16,POL,Europe & Central Asia,High income,Poland
+17,PRT,Europe & Central Asia,High income,Portugal
+18,ROU,Europe & Central Asia,Upper middle income,Romania
+19,SRB,Europe & Central Asia,Upper middle income,Serbia
+20,SVN,Europe & Central Asia,High income,Slovenia
+21,ESP,Europe & Central Asia,High income,Spain
+22,SWE,Europe & Central Asia,High income,Sweden
+23,CHE,Europe & Central Asia,High income,Switzerland
+24,UKR,Europe & Central Asia,Lower middle income,Ukraine
+25,GBR,Europe & Central Asia,High income,United Kingdom

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bar Chart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link   href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+</head>
+<body style="background-color: #b6d4fe">
+    <div th:replace="navBar :: navBarM"></div>
+    <div id = "container" style = "width: 700px; height: 500px; margin: 0 auto"></div>
+    <script th:inline="javascript">
+        var dataValues = [[${dataValues}]];
+        var countryNames = [[${countryNames}]];
+        var indicatorNames = [[${indicatorNames}]];
+
+        var years = [[${years}]];
+
+        var data = []
+
+        let counter = 0
+        for (let i = 0; i < [[${indicatorLen}]]; i++) {
+            for(let j=0; j<[[${countryLen}]]; j++){
+                data.push({name: indicatorNames[i] + ' for ' + countryNames[j],data: dataValues[counter]})
+                counter ++
+            }
+        }
+
+        Highcharts.chart('container', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Bar Chart'
+            },
+
+            xAxis: {
+                categories: years,
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'value'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                },
+                pointWidth: 15
+            },
+
+            series: data
+        });
+    </script>
+</body>
+</html>
