@@ -1,4 +1,4 @@
-This project is about collecting data from 25 countries in Europe, from World Bank organization http://data.worldbank.org/. Data includes many indicators for each one of the countries based on a spesific period of time. After normalizing csv files , they are used to create the database.Then using Spring Boot, the web app is created. User can choose beside this 25 countries  and indicators and create plots.   
+This project is about collecting data from 25 countries in Europe, from World Bank organization http://data.worldbank.org/. Data includes many indicators for each one of the countries based on a spesific period of time. After normalizing csv files , they are used to create the database.Then using Spring Boot, the web app is created. User can choose beside these 25 countries  and indicators and create plots.   
 
 
 
